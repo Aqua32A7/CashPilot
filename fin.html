@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CashPilot — Financial Automation for Startups</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">✦</div>
+    CashPilot
+  </a>
+  <ul class="nav-links">
+    <li><a href="#calculator">Calculator</a></li>
+    <li><a href="#scenarios">Scenarios</a></li>
+    <li><a href="#how-it-works">How it Works</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+      <div class="toggle-knob" id="toggleKnob">☀️</div>
+    </button>
+    <a href="#calculator" class="btn-outline" id="navOutline">Get Started</a>
+    <a href="#calculator" class="btn-primary">Try for free</a>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMenu()">✕</button>
+  <a href="#calculator" onclick="toggleMenu()">Calculator</a>
+  <a href="#scenarios" onclick="toggleMenu()">Scenarios</a>
+  <a href="#how-it-works" onclick="toggleMenu()">How it Works</a>
+  <a href="#" onclick="toggleMenu()">About</a>
+</div>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-badge">
+      <span class="hero-badge-pill">Financial</span>
+      Planning with CashPilot
+    </div>
+    <h1>Financial<br><span class="accent-text">Automation for</span><br>Startups</h1>
+    <p class="hero-desc">CashPilot empowers you to invest, plan, and run your finances with confidence. From runway goals to wealth growth, everything starts here.</p>
+    <div class="hero-cta">
+      <a href="#calculator" class="btn-large btn-hero-primary">Run Instant Analysis ↗</a>
+      <a href="#how-it-works" class="btn-large btn-hero-outline">Learn More</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">700+</div>
+        <div class="hero-stat-label">Companies<br>Using CashPilot</div>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div>
+        <div class="hero-stat-num">17</div>
+        <div class="hero-stat-label">Awarded<br>Active Mentors</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
+    <div class="iso-wrap">
+      <div class="iso-shape iso-shape-tl"></div>
+      <div class="iso-shape iso-shape-tr"></div>
+      <div class="iso-shape iso-shape-br"></div>
+      <div class="iso-cloud iso-cloud-1"></div>
+      <div class="iso-cloud iso-cloud-2"></div>
+      <div class="iso-dashboard">
+        <div class="iso-panel iso-left-panel">
+          <div class="iso-panel-label">Accounts</div>
+          <div class="iso-nav-items">
+            <div class="iso-nav-item iso-nav-active"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2" opacity="0.5"/><rect x="3" y="13" width="8" height="8" rx="2" opacity="0.5"/><rect x="13" y="13" width="8" height="8" rx="2" opacity="0.3"/></svg></div>
+            <div class="iso-nav-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 3H8L6 7h12l-2-4z"/></svg></div>
+            <div class="iso-nav-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2" stroke-linecap="round"/></svg></div>
+            <div class="iso-nav-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          </div>
+        </div>
+        <div class="iso-panel iso-main-panel">
+          <div class="iso-main-header">
+            <div class="iso-logo-text">CashPilot</div>
+            <div class="iso-header-dot"></div>
+          </div>
+          <div class="iso-chart-area">
+            <svg width="100%" height="100" viewBox="0 0 220 100" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="cg" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.3"/>
+                  <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path d="M0,90 L30,75 L58,65 L82,50 L98,40 L118,30 L138,22 L158,14 L178,8 L200,4 L220,1 L220,100 L0,100 Z" fill="url(#cg)"/>
+              <path d="M0,90 L30,75 L58,65 L82,50 L98,40 L118,30 L138,22 L158,14 L178,8 L200,4 L220,1" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+              <circle cx="220" cy="1" r="4" fill="#7C3AED"/>
+              <circle cx="220" cy="1" r="8" fill="#7C3AED" opacity="0.2"/>
+            </svg>
+          </div>
+          <div class="iso-balance-row">
+            <div class="iso-balance-label">Total Balance</div>
+            <div class="iso-balance-val">₹2,50,000</div>
+          </div>
+        </div>
+        <div class="iso-panel iso-right-panel">
+          <div class="iso-right-title">Spending<br>Categories</div>
+          <div class="iso-donut-wrap">
+            <svg width="68" height="68" viewBox="0 0 72 72">
+              <circle cx="36" cy="36" r="26" fill="none" stroke="#ede9fe" stroke-width="11"/>
+              <circle cx="36" cy="36" r="26" fill="none" stroke="#7C3AED" stroke-width="11" stroke-dasharray="82 82" stroke-linecap="round" transform="rotate(-90 36 36)"/>
+              <circle cx="36" cy="36" r="26" fill="none" stroke="#a78bfa" stroke-width="11" stroke-dasharray="41 123" stroke-dashoffset="-82" stroke-linecap="round" transform="rotate(-90 36 36)"/>
+              <circle cx="36" cy="36" r="16" fill="white"/>
+            </svg>
+          </div>
+          <div class="iso-legend">
+            <div class="iso-legend-row"><span class="iso-dot" style="background:#7C3AED"></span><span>Savings</span></div>
+            <div class="iso-legend-row"><span class="iso-dot" style="background:#a78bfa"></span><span>Invest</span></div>
+          </div>
+          <div class="iso-right-divider"></div>
+          <div class="iso-right-subtitle">Recent Transactions</div>
+          <div class="iso-txn">
+            <div class="iso-txn-icon">💳</div>
+            <div class="iso-txn-info"><div class="iso-txn-name">Debit Card</div><div class="iso-txn-amt">−₹3,100</div></div>
+          </div>
+          <div class="iso-txn">
+            <div class="iso-txn-icon">⭐</div>
+            <div class="iso-txn-info"><div class="iso-txn-name">Monthly Plan</div><div class="iso-txn-amt">−₹4,200</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="iso-bar iso-bar-1"></div>
+      <div class="iso-bar iso-bar-2"></div>
+      <div class="iso-bar iso-bar-3"></div>
+    </div>
+  </div>
+</section>
+
+<section class="features-row fade-in">
+  <div class="feature-card">
+    <div class="feature-card-icon">💸</div>
+    <span class="feature-arrow">↗</span>
+    <h3>Real-Time Cash &amp; Runway Reports</h3>
+    <p>Create accurate, investor-ready cash flow forecast models in minutes with live calculations.</p>
+  </div>
+  <div class="feature-card">
+    <div class="feature-card-icon">📐</div>
+    <h3>Design and Forecast</h3>
+    <p>Model different burn scenarios side-by-side. Stress-test your runway before it becomes a crisis.</p>
+  </div>
+  <div class="feature-card">
+    <div class="feature-card-icon">🤝</div>
+    <h3>Collaborate with Purpose</h3>
+    <p>Find all of your data in a flexible spreadsheet for easy viewing and custom modeling with your team.</p>
+  </div>
+</section>
+
+<section id="calculator">
+  <div class="calc-header">
+    <div class="section-badge">✦ Runway Calculator</div>
+    <h2>Know your numbers.<br>Plan your future.</h2>
+    <p>Enter your financials below and get an instant runway analysis with actionable insights.</p>
+  </div>
+  <div class="calc-grid">
+    <div class="calc-inputs">
+      <div class="input-group">
+        <label>Total Cash on Hand <span>Your current bank balance</span></label>
+        <div class="input-wrapper">
+          <span class="input-prefix">₹</span>
+          <input type="number" id="cashInput" placeholder="5000000" min="0" step="10000" oninput="calculate()">
+        </div>
+        <div class="input-hint">Include all liquid assets across accounts</div>
+      </div>
+      <div class="input-group">
+        <label>Monthly Burn Rate <span>Net cash spent per month</span></label>
+        <div class="input-wrapper">
+          <span class="input-prefix">₹</span>
+          <input type="number" id="burnInput" placeholder="500000" min="0" step="5000" oninput="calculate()">
+        </div>
+        <div class="input-hint">Total expenses minus any revenue</div>
+      </div>
+      <div class="slider-group">
+        <div class="slider-label">
+          <span>Expected Growth Rate (MoM)</span>
+          <span class="slider-value" id="growthDisplay">0%</span>
+        </div>
+        <input type="range" id="growthSlider" min="-20" max="30" value="0" step="1" oninput="updateGrowth();calculate()">
+        <div class="input-hint">Adjusts burn rate month-over-month (negative = cost reduction)</div>
+      </div>
+      <div class="advanced-toggle" id="advToggle" onclick="toggleAdvanced()">
+        <span class="toggle-icon">▶</span>
+        <span>Advanced inputs</span>
+      </div>
+      <div class="advanced-fields" id="advancedFields">
+        <div class="input-group">
+          <label>Monthly Revenue <span>Current MRR</span></label>
+          <div class="input-wrapper">
+            <span class="input-prefix">₹</span>
+            <input type="number" id="revenueInput" placeholder="100000" min="0" step="5000" oninput="calculate()">
+          </div>
+        </div>
+        <div class="input-group">
+          <label>Expected Fundraise <span>Planned capital raise</span></label>
+          <div class="input-wrapper">
+            <span class="input-prefix">₹</span>
+            <input type="number" id="fundraiseInput" placeholder="0" min="0" step="100000" oninput="calculate()">
+          </div>
+        </div>
+        <div class="slider-group">
+          <div class="slider-label">
+            <span>Months until fundraise closes</span>
+            <span class="slider-value" id="fundraisemonthsDisplay">6 mo</span>
+          </div>
+          <input type="range" id="fundraiseMonths" min="1" max="24" value="6" step="1" oninput="updateFundraiseMonths();calculate()">
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-result" id="calcResult">
+      <div class="result-empty" id="resultEmpty">
+        <div class="empty-icon">✦</div>
+        <p>Enter your cash on hand and monthly burn rate to calculate your runway.</p>
+      </div>
+      <div id="resultContent" style="display:none;flex-direction:column;flex:1;">
+        <div class="result-status" id="resultStatus">
+          <span class="status-dot"></span>
+          <span id="statusText">—</span>
+        </div>
+        <div class="result-main-num" id="mainNum">—</div>
+        <div class="result-label">months of runway remaining</div>
+        <div class="result-divider"></div>
+        <div class="result-breakdown">
+          <div class="result-row">
+            <span class="result-row-label">Cash on Hand</span>
+            <span class="result-row-value" id="rb-cash">—</span>
+          </div>
+          <div class="result-row">
+            <span class="result-row-label">Net Monthly Burn</span>
+            <span class="result-row-value" id="rb-burn">—</span>
+          </div>
+          <div class="result-row">
+            <span class="result-row-label">Projected Zero Date</span>
+            <span class="result-row-value" id="rb-date">—</span>
+          </div>
+          <div class="result-row" id="rb-rev-row" style="display:none">
+            <span class="result-row-label">Monthly Revenue</span>
+            <span class="result-row-value" id="rb-rev">—</span>
+          </div>
+          <div class="result-row" id="rb-fund-row" style="display:none">
+            <span class="result-row-label">Runway incl. fundraise</span>
+            <span class="result-row-value" id="rb-fund">—</span>
+          </div>
+        </div>
+        <div class="runway-meter">
+          <div class="runway-meter-label"><span>0 mo</span><span>24 mo</span></div>
+          <div class="runway-track"><div class="runway-fill" id="runwayFill"></div></div>
+        </div>
+        <div class="chart-section">
+          <div class="chart-title">Cash Balance Decline</div>
+          <canvas id="cashChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="scenarios" class="fade-in">
+  <div class="scenarios-header">
+    <h2>Pre-built Scenarios</h2>
+    <p>Load a scenario to see how real-world startups look. Click any card to populate the calculator.</p>
+  </div>
+  <div class="scenarios-grid">
+    <div class="scenario-card" onclick="loadScenario(this,5000000,420000,5,0)">
+      <div class="scenario-name">🚀 Early Stage SaaS</div>
+      <p>Seed-funded B2B startup, pre-revenue</p>
+      <div class="scenario-nums">
+        <div class="scenario-num"><strong>₹50L</strong><span>Cash</span></div>
+        <div class="scenario-num"><strong>₹4.2L</strong><span>Burn/mo</span></div>
+      </div>
+    </div>
+    <div class="scenario-card" onclick="loadScenario(this,20000000,1200000,8,150000)">
+      <div class="scenario-name">📈 Series A Growth</div>
+      <p>Post-Series A, scaling fast with revenue</p>
+      <div class="scenario-nums">
+        <div class="scenario-num"><strong>₹2Cr</strong><span>Cash</span></div>
+        <div class="scenario-num"><strong>₹12L</strong><span>Burn/mo</span></div>
+      </div>
+    </div>
+    <div class="scenario-card" onclick="loadScenario(this,800000,180000,-5,40000)">
+      <div class="scenario-name">⚠️ Critical Zone</div>
+      <p>Bootstrapped startup, runway running out</p>
+      <div class="scenario-nums">
+        <div class="scenario-num"><strong>₹8L</strong><span>Cash</span></div>
+        <div class="scenario-num"><strong>₹1.8L</strong><span>Burn/mo</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how-it-works" class="fade-in">
+  <div class="how-grid">
+    <div class="how-steps">
+      <div style="margin-bottom:32px">
+        <div class="section-badge">✦ Process</div>
+        <h2 style="font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,3vw,2.5rem);letter-spacing:-0.02em;margin-bottom:10px;margin-top:16px">How the<br>formula works</h2>
+        <p style="font-size:0.9rem;color:var(--muted)">Transparent, investor-grade calculations built for founders.</p>
+      </div>
+      <div class="how-step active" onclick="activateStep(this)">
+        <div class="step-num">01</div>
+        <div class="step-content"><h3>Input your financials</h3><p>Enter total liquid cash (₹) and monthly burn. Burn = total spend minus revenue.</p></div>
+      </div>
+      <div class="how-step" onclick="activateStep(this)">
+        <div class="step-num">02</div>
+        <div class="step-content"><h3>Dynamic runway model</h3><p>Runway = Cash ÷ Net Burn. Growth rates compound monthly for precision forecasting.</p></div>
+      </div>
+      <div class="how-step" onclick="activateStep(this)">
+        <div class="step-num">03</div>
+        <div class="step-content"><h3>Zone classification</h3><p>Safe (12+ mo) → Yellow (6–11 mo) → Danger (&lt;6 mo). Start fundraising at yellow.</p></div>
+      </div>
+      <div class="how-step" onclick="activateStep(this)">
+        <div class="step-num">04</div>
+        <div class="step-content"><h3>Scenario planning</h3><p>Model fundraise timing, revenue growth, and burn reduction in one view.</p></div>
+      </div>
+    </div>
+    <div class="how-visual">
+      <div class="mini-dashboard">
+        <div class="mini-dash-row">
+          <span class="mini-label">Cash</span>
+          <div class="mini-bar-container"><div class="mini-bar" style="width:80%"></div></div>
+          <span class="mini-value">₹40L</span>
+        </div>
+        <div class="mini-dash-row">
+          <span class="mini-label">Burn</span>
+          <div class="mini-bar-container"><div class="mini-bar" style="width:35%;background:#E74C3C"></div></div>
+          <span class="mini-value">₹3.5L</span>
+        </div>
+        <div class="mini-dash-row">
+          <span class="mini-label">Revenue</span>
+          <div class="mini-bar-container"><div class="mini-bar" style="width:25%;background:#F1C40F"></div></div>
+          <span class="mini-value">₹1.2L</span>
+        </div>
+        <div class="mini-dash-row">
+          <span class="mini-label" style="font-weight:600;color:var(--black)">Runway</span>
+          <div class="mini-bar-container" style="height:10px"><div class="mini-bar" style="width:55%"></div></div>
+          <span class="mini-value" style="color:var(--green-accent)">17.4 mo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section id="faq" class="faq-section fade-in">
+  <div class="faq-inner">
+    <div class="faq-header">
+      <div class="section-badge">✦ FAQs</div>
+      <h2 style="font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);letter-spacing:-0.02em;margin-top:16px;margin-bottom:12px;">Questions founders<br><em>actually ask</em></h2>
+      <p style="font-size:0.93rem;color:var(--muted);max-width:460px;margin:0 auto;">Everything you need to know about CashPilot and the runway calculator.</p>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>What exactly is "runway" and why does it matter?</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-answer">
+          <p>Runway is the number of months your startup can operate before running out of cash, assuming your current burn rate stays constant. It's one of the most critical metrics for any founder — it tells you how much time you have to reach the next milestone, raise funds, or hit profitability. Investors always ask about it, and you should always know the answer.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>How is net burn different from gross burn?</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-answer">
+          <p>Gross burn is your total monthly cash spend — salaries, rent, SaaS tools, everything out the door. Net burn subtracts any revenue you bring in. So if you spend ₹5L/mo but earn ₹1.2L/mo, your net burn is ₹3.8L/mo. The calculator uses net burn for a more accurate runway picture. Enter your MRR in the "Advanced" section to factor it in.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>When should I start fundraising according to the zones?</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-answer">
+          <p>The rule of thumb: start fundraising when you hit the <strong>Yellow (Caution) Zone</strong> — 6 to 11 months of runway. Enterprise fundraising rounds take 3–6 months on average, so waiting until you're in the Danger Zone (&lt;6 months) puts you in a weak negotiating position. Ideally, you should begin conversations with investors while you're still in the Safe Zone (12+ months).</p>
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>Does the calculator account for revenue growth over time?</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-answer">
+          <p>Yes! Use the growth rate slider in the Advanced section to model burn that compounds monthly. A positive growth rate means your net burn increases each month (useful for scaling teams), while a negative rate models burn reduction scenarios. This makes the projections far more realistic than a flat cash ÷ burn formula.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>Is my financial data saved anywhere?</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-answer">
+          <p>No. The CashPilot runway calculator runs entirely in your browser. We don't send any numbers you enter to our servers — there's nothing to log, store, or breach. Your data stays on your device. This is intentional: founders deserve tools that respect confidentiality without needing to create an account.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>What's included in "cash on hand" — should I count credit lines?</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-answer">
+          <p>Cash on hand should reflect liquid, immediately accessible funds — typically your current bank balance(s) and any fixed deposits you could break within a week. Be conservative. Don't include undrawn credit lines, pending customer invoices, or committed-but-not-wired investor money. Overestimating cash is a common mistake that gives a false sense of security.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>Can I use this for Series A and beyond, or just early-stage?</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-answer">
+          <p>Absolutely — the calculator works at any stage. We've included pre-built scenarios for Early Stage SaaS, Series A Growth, and Critical Zone situations so you can see how different funding stages look. Whether you're a bootstrapped team of 3 or a 50-person post-Series A company, runway planning never stops being relevant.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>How is CashPilot different from a simple spreadsheet?</span>
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-answer">
+          <p>Spreadsheets require you to build and maintain formulas, handle edge cases, and interpret the results yourself. CashPilot gives you instant zone classification, a visual cash decline chart, scenario planning with fundraise timing, and growth-rate compounding — all in one purpose-built interface designed for founders, not accountants. Think of it as your CFO's back-of-envelope, upgraded.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">
+    <a href="#" class="nav-logo" style="text-decoration:none;color:var(--black)"><div class="nav-logo-icon">✦</div>CashPilot</a>
+    <p>Financial automation tools built for founders who move fast and need clarity.</p>
+  </div>
+  <div class="footer-col">
+    <h4>Product</h4>
+    <ul><li><a href="#calculator">Calculator</a></li><li><a href="#scenarios">Scenarios</a></li><li><a href="#">Forecasting</a></li><li><a href="#">Reports</a></li></ul>
+  </div>
+  <div class="footer-col">
+    <h4>Company</h4>
+    <ul><li><a href="#">About</a></li><li><a href="#">Blog</a></li><li><a href="#">Careers</a></li><li><a href="#">Press</a></li></ul>
+  </div>
+  <div class="footer-col">
+    <h4>Legal</h4>
+    <ul><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li><li><a href="#">Security</a></li></ul>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span>© 2026 CashPilot. All rights reserved.</span>
+  <span>Made for founders, by founders.</span>
+</div>
+
+<div class="sticky-cta" id="stickyCta">
+  <a href="#how-it-works" class="sticky-btn sticky-btn-secondary">Learn More</a>
+  <a href="#calculator" class="sticky-btn sticky-btn-primary" onclick="setTimeout(()=>document.getElementById('cashInput').focus(),600)">Calculate Runway ↗</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
